@@ -1,6 +1,6 @@
-body, html {
+body {
     font-family: 'Product Sans', Arial, sans-serif;
-    background-image: url("http://i.stack.imgur.com/jGlzr.png");
+    background-image: url("http://www.galaxiastudio.com/wp-content/uploads/2014/03/2252.jpg");
 }
 
 /*Navigation bar*/
@@ -69,7 +69,7 @@ textarea {
     font-size: 20px;
     border: 2px dashed black;
     alignment: center;
-    margin: 0 auto;
+    margin: 10px;
 }
 
 button {
@@ -80,6 +80,20 @@ button {
     padding: 10px;
 }
 
+/*jQuery stuff*/
+
+#add-card-button {
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    font-size: 35px;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+#add-card-button:hover {
+    opacity: 1;
+}
 
 /*Preview containers*/
 .preview-container {
@@ -209,7 +223,6 @@ img {
     font-size: 24px;
     bottom: 0;
     text-align: center;
-    border-radius: 25px;
 }
 
 .action-button:hover {
@@ -230,6 +243,10 @@ img {
 
 /*edit-container*/
 
+.hide {
+    display: none;
+}
+
 .edit-container {
     position: relative;
     background-color: dodgerblue;
@@ -237,6 +254,13 @@ img {
     width: 500px;
     margin: 20px;
     border: 2px solid black;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
 }
 
 .edit-container .title {
@@ -248,7 +272,6 @@ img {
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 
 .edit-container .title input {
     background-color: white;
@@ -265,7 +288,9 @@ img {
     max-width: 50px;
 }
 
-
+.edit-container textarea {
+    margin: 0 auto;
+}
 .upload {
     margin: 10px;
     text-align: center;
@@ -286,11 +311,13 @@ img {
 
 .chat {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     background-color: dodgerblue;
     color: white;
     top: 50px;
     right: 0;
-    height: 100%;
+    bottom: 0;
     width: 300px;
 }
 
@@ -298,15 +325,14 @@ img {
     font-size: 36px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Shadow*/
-
 }
 
 .message-feed {
+    flex-grow: 1;
     background-color: white;
     color: dodgerblue;
     margin: 10px;
     padding: 5px;
-    white-space: nowrap;
     overflow-y: scroll;
 }
 
@@ -322,11 +348,12 @@ img {
 .chat .text-field {
     background-color: dodgerblue;
     text-align: center;
+
 }
 
 /*about.html*/
 
 .stuff {
-    max-height: 600px;
-    max-width: 600px;
+    max-height: 300px;
+    max-width: 300px;
 }
