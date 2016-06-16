@@ -1,26 +1,332 @@
 body, html {
-    margin: 0;
-    padding: 0;
+    font-family: 'Product Sans', Arial, sans-serif;
+    background-image: url("http://i.stack.imgur.com/jGlzr.png");
 }
 
+/*Navigation bar*/
 #top {
     position: fixed;
     width: 100%;
     background-color: dodgerblue;
     top: 0;
     left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Shadow*/
 }
 
-#top div {
-    display: inline-block;
-
+#top button {
     float: left;
-    display: block;
     background-color: dodgerblue;
     color: white;
-    font-family: "Segoe UI", sans-serif;
     font-size: 24px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
     border-right: 1px solid white;
     padding: 10px;
     text-align: center;
+}
+
+#top button:hover {
+    background-color: white;
+    color: dodgerblue;
+
+}
+
+#top a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+}
+
+.search-bar {
+    /*position: absolute;*/
+    background-color: white;
+    color: dodgerblue;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+#top .search-button {
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+/*Main section*/
+#main-section {
+    padding: 50px 20px;
+}
+
+/*General element selectors*/
+textarea {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 20px;
+    border: 2px dashed black;
+    alignment: center;
+    margin: 0 auto;
+}
+
+button {
+    background-color: dodgerblue;
+    color: white;
+    font-family: 'Product Sans', Arial, sans-serif;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+
+/*Preview containers*/
+.preview-container {
+    display: inline-block;
+    position: relative;
+    background-color: dodgerblue;
+    border: 2px solid black;
+    min-height: 300px;
+    width: 250px;
+    margin: 20px;
+}
+
+.title {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.author {
+    padding-left: 10px;
+
+}
+.preview-container .author {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: block;
+    background-color: lightgray;
+}
+
+.tags label {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+img {
+    width: 100%;
+    text-align: center;
+}
+
+.preview img {
+    opacity: 0.5;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    text-align: right;
+    padding: 10px;
+
+}
+
+/* Normal containers */
+
+.normal-container {
+    position: relative;
+    background-color: dodgerblue;
+    height: 600px;
+    width: 500px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.normal-container .title {
+    font-size: 36px;
+}
+
+.normal-container .author {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.exit-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    color: white;
+}
+
+.text-field {
+    background-color: white;
+    padding: 10px;
+}
+
+.text-field p {
+    max-height: 150px;
+    border: 2px dashed black;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.preview-box {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.preview-box img {
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    width: 100px;
+}
+
+.preview-box img:hover {
+    opacity: 0.5;
+}
+
+.action-button {
+    font-size: 24px;
+    bottom: 0;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.action-button:hover {
+    background-color: white;
+    color: dodgerblue;
+    transition: background-color 0.25s;
+}
+
+.download {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.download-button {
+    position: absolute;
+
+}
+
+/*edit-container*/
+
+.edit-container {
+    position: relative;
+    background-color: dodgerblue;
+    height: 600px;
+    width: 500px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.edit-container .title {
+     font-size: 36px;
+ }
+
+.edit-container .author {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.edit-container .title input {
+    background-color: white;
+    color: dodgerblue;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 36px;
+}
+
+.edit-container .author input {
+    background-color: white;
+    color: dodgerblue;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 16px;
+    max-width: 50px;
+}
+
+
+.upload {
+    margin: 10px;
+    text-align: center;
+}
+
+.save {
+    text-align: center;
+}
+
+.button-list {
+    list-style: none;
+}
+
+.button-list li {
+    display: inline;
+    margin: 10px;
+}
+
+.chat {
+    position: fixed;
+    background-color: dodgerblue;
+    color: white;
+    top: 50px;
+    right: 0;
+    height: 100%;
+    width: 300px;
+}
+
+.chat-heading {
+    font-size: 36px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Shadow*/
+
+}
+
+.message-feed {
+    background-color: white;
+    color: dodgerblue;
+    margin: 10px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow-y: scroll;
+}
+
+.message {
+    margin: 10px;
+    border: thin solid black;
+}
+
+.message h1, p {
+    margin: 5px;
+}
+
+.chat .text-field {
+    background-color: dodgerblue;
+    text-align: center;
+}
+
+/*about.html*/
+
+.stuff {
+    max-height: 600px;
+    max-width: 600px;
 }
