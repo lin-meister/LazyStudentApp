@@ -1,5 +1,6 @@
 body, html {
     font-family: 'Product Sans', Arial, sans-serif;
+    background-image: url("http://i.stack.imgur.com/jGlzr.png");
 }
 
 /*Navigation bar*/
@@ -10,21 +11,51 @@ body, html {
     top: 0;
     left: 0;
     z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Shadow*/
 }
 
-#top label {
+#top button {
     float: left;
     background-color: dodgerblue;
     color: white;
     font-size: 24px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
     border-right: 1px solid white;
     padding: 10px;
     text-align: center;
 }
 
-#top label:hover {
+#top button:hover {
     background-color: white;
     color: dodgerblue;
+
+}
+
+#top a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+}
+
+.search-bar {
+    /*position: absolute;*/
+    background-color: white;
+    color: dodgerblue;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 24px;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+#top .search-button {
+    border: 1px solid white;
+    border-radius: 25px;
 }
 
 /*Main section*/
@@ -49,10 +80,12 @@ button {
     padding: 10px;
 }
 
+
 /*Preview containers*/
 .preview-container {
     display: inline-block;
     position: relative;
+    background-color: dodgerblue;
     border: 2px solid black;
     min-height: 300px;
     width: 250px;
@@ -69,6 +102,11 @@ button {
 
 .author {
     padding-left: 10px;
+
+}
+.preview-container .author {
+    color: white;
+    margin-bottom: 10px;
 }
 
 .tags {
@@ -109,7 +147,6 @@ img {
 /* Normal containers */
 
 .normal-container {
-    display: inline-block;
     position: relative;
     background-color: dodgerblue;
     height: 600px;
@@ -247,4 +284,49 @@ img {
     margin: 10px;
 }
 
+.chat {
+    position: fixed;
+    background-color: dodgerblue;
+    color: white;
+    top: 50px;
+    right: 0;
+    height: 100%;
+    width: 300px;
+}
 
+.chat-heading {
+    font-size: 36px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Shadow*/
+
+}
+
+.message-feed {
+    background-color: white;
+    color: dodgerblue;
+    margin: 10px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow-y: scroll;
+}
+
+.message {
+    margin: 10px;
+    border: thin solid black;
+}
+
+.message h1, p {
+    margin: 5px;
+}
+
+.chat .text-field {
+    background-color: dodgerblue;
+    text-align: center;
+}
+
+/*about.html*/
+
+.stuff {
+    max-height: 600px;
+    max-width: 600px;
+}
